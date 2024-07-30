@@ -1,0 +1,47 @@
+Algorithm for Library Management System
+
+Step 1: Define the Book Class
+1.	Create a Book class with the following attributes:
+o	id: an integer representing the book's ID.
+o	title: a string representing the book's title.
+o	author: a string representing the book's author.
+o	isBorrowed: a boolean indicating if the book is borrowed.
+3.	Define a constructor to initialize the attributes.
+4.	Define getter methods for each attribute.
+5.	Define methods to borrow and return the book.
+6.	Override the toString method to display the book details.
+	
+Step 2: Define the Library Class
+1.	Create a Library class with the following attributes:
+o	books: a list (e.g., ArrayList<Book>) to store the book objects.
+2.	Define a constructor to initialize the book list.
+3.	Define a method addBook(Book book) to add a book to the library.
+4.	Define a method borrowBook(int bookId) to borrow a book:
+o	Iterate through the book list.
+o	If the book ID matches and the book is not borrowed, set its isBorrowed attribute to true.
+o	If the book is already borrowed, display a message.
+o	If the book ID does not match any book, display a "book not found" message.
+5.	Define a method returnBook(int bookId) to return a book:
+o	Iterate through the book list.
+o	If the book ID matches and the book is borrowed, set its isBorrowed attribute to false.
+o	If the book is not borrowed, display a message.
+o	If the book ID does not match any book, display a "book not found" message.
+6.	Define a method listBooks() to display all books in the library.
+7.	Define methods to save and load the library state to and from a file using serialization.
+
+Step 3: Define the LibrarySystem Class (Main Class)
+1.	Create a LibrarySystem class with the main method.
+2.	Instantiate a Library object.
+3.	Use a Scanner object to read user input.
+4.	Implement a loop to display the menu and process user choices:
+o	Display menu options: add book, borrow book, return book, list books, save library, load library, exit.
+o	Read the user’s choice.
+o	Implement a switch-case or if-else structure to handle each menu option:
+	Add Book: Prompt the user to enter book details and add the book to the library.
+	Borrow Book: Prompt the user to enter the book ID and borrow the book.
+	Return Book: Prompt the user to enter the book ID and return the book.
+	List Books: Call the listBooks method to display all books.
+	Save Library: Prompt the user to enter a filename and save the library state to the file.
+	Load Library: Prompt the user to enter a filename and load the library state from the file.
+	Exit: Exit the loop and terminate the program.
+
